@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorium 2</title>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="lab, amw, www" />
+        <meta name="description" content="Laboratorium 2" />
+        <meta name="author" content="Kamil Szustak" />
+        <meta name="robots" content="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="html5.js"></script>
+        <script src="scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1 id="hello_header" onmouseover="onMouseOverHeader()"" onmouseout="onMouseOutHeader()">Hello, World!</h1>
+
+        <div>
+            <button class="btn btn-primary" onclick="changeHeader()">Change header</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary" onclick="updateBadges()">
+                Notifications <span class="badge badge-light">0</span>
+            </button>
+    
+            <button type="button" class="btn btn-primary" onclick="updateBadges()">
+                Notifications <span class="badge badge-light">0</span>
+            </button>
+        </div>
+
+        <div>
+            <ol id="drinks_list">
+                <li>Coffee</li>
+                <li>Tea</li>
+            </ol>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" onclick="addDrinkToList()">Add drink</button>
+            <button class="btn btn-primary" onclick="copyFirstElement()">Copy first element</button>
+            <button class="btn btn-primary" onclick="copyLastElement()">Copy last element</button>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" onclick="changeBackgroundColor()">Change background color</button>
+        </div>
+
+        <section>
+            <h5 class="small_header">First header</h5>
+            <h5 class="small_header">Second header</h5>
+            <h5 class="small_header">Third header</h5>
+            <button class="btn btn-primary" onclick="changeSmallHeadersColors()">Change headers colors</button>
+        </section>
+
+        <section>
+            <div>
+                <button class="btn btn-primary" onclick="moveButton(1)">Move left</button>
+                <button class="btn btn-primary" onclick="moveButton(2)">Move right</button>
+            </div>
+
+            <div>
+                <button id="moving_button" class="btn btn-danger">Moving button</button>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <button class="btn btn-primary" onclick="changeButtonOpacity(1)">Opacity +</button>
+                <button class="btn btn-primary" onclick="changeButtonOpacity(2)">Opacity -</button>
+            </div>
+
+            <div>
+                <button id="opacity_button" class="btn btn-danger">Opacity button</button>
+            </div>
+        </section>
+
+        <section id="buttons_section">
+            <div>
+                <button class="btn btn-primary" onclick="createButton()">Create button</button>
+            </div>
+        </section>
+
+        <div>
+            <button class="btn btn-primary" onclick="showAlert()">Alert</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown_menu_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown menu
+            </button>
+
+            <div id="dropdown_div" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="Coffee_element" class="dropdown-item" href="">Coffee</a>
+                <a id="Tea_element" class="dropdown-item" href="">Tea</a>
+                <a id="Tea_element" class="dropdown-item" href="">Water</a>
+                <a id="Tea_element" class="dropdown-item" href="">Juice</a>
+                <a id="Tea_element" class="dropdown-item" href="">Cola</a>
+            </div>
+        </div>
+
+        <section>
+            <form>
+                <div class="form-group">
+                    <label for="email_input">Email address</label>
+                    <input type="email" class="form-control" id="email_input" placeholder="Enter email">
+                </div>
+    
+                <div class="form-group">
+                    <label for="password_input">Password</label>
+                    <input type="password" class="form-control" id="password_input" placeholder="Password">
+                </div>
+            </form>
+
+            <button type="submit" class="btn btn-primary" onclick="showCredentials()">Sign in</button>
+        </section>
+
+        <section>
+            <img id="puppy_image" src="puppy.jpg" />
+            
+            <div>
+                <button type="submit" class="btn btn-primary" onclick="rotateImage(1)">Rotate left</button>
+                <button type="submit" class="btn btn-primary" onclick="rotateImage(2)">Rotate right</button>
+                <button type="submit" class="btn btn-primary" onclick="rotateImage(0)">Reset</button>
+
+            </div>
+        </section>
+
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="changeEveryButtonColor()">Rainbow</button>
+        </div>
+
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="mr-auto">Bootstrap</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Hello there!
+            </div>
+          </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="showToast()">Show toast</button>
+        </div>
+
+        <div id="spinner" class="spinner-border" role="status" hidden="true">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="toggleSpinner()">Show/hide spinner</button>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="changeButtonClass()">Change class</button>
+        </div>
+       
+    </body>
+</html>

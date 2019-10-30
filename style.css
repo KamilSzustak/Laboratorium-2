@@ -1,0 +1,30 @@
+article, aside, details, dialog, figcaption, figure, footer, header, main, nav, section 
+{
+	display:block;
+}
+
+audio, canvas, embed, keygen, meter, progress, video 
+{
+	display:inline-block;
+}
+
+[hidden] 
+{
+	display:none;
+}
+
+body
+{
+    padding: 16px;
+}
+
+div
+{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+img
+{
+	margin-top: 32px;
+}
